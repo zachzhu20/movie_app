@@ -10,6 +10,12 @@
   background-color: #ce002c;
   border:none;
 }
+
+.btn-primary:hover {
+  background-color: #ce002c;
+  border: none;
+  opacity: 0.7;
+}
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
