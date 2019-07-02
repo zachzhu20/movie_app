@@ -17,3 +17,10 @@ User.create!(name:  "Zach Zhu",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(6)
+10.times do |n|
+  name = "Movie-#{n+1}"
+  comment = Faker::Lorem.sentence(5)
+  users.each { |user| user.movies.create!(name: name, comment: comment) }
+end

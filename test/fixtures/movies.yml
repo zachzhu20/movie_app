@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Movie1
+  comment: Comment1
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+
+two:
+  name: Movie2
+  comment: Comment2
+  created_at: <%= 60.minutes.ago %>
+  user: michael
+
+most_recent:
+  name: Movie3
+  comment: Comment3
+  created_at: <%= Time.zone.now %>
+  user: michael
+
+<% 30.times do |n| %>
+movie_<%= n %>:
+  name: Movie<%= n+1 %>
+  comment: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 1.days.ago %>
+  user: michael
+<% end %>
+
+ants:
+  name: ants
+  comment: "Oh, is that what you want? Because that's how you get ants!"
+  created_at: <%= 2.years.ago %>
+  user: archer

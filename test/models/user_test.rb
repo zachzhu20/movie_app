@@ -59,4 +59,12 @@ class UserTest < ActiveSupport::TestCase
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?(:remember,'')
   end
+  
+  test "associated movies should be destroyed" do
+    @user.save
+    @user.movies.create!(name: "Star Wars", comment: "A great syfy movie")
+    assert_difference 'Movie.count', -1 do
+      @user.destroy
+    end
+  end
 end

@@ -1,0 +1,13 @@
+<li id="movie-<%= movie.id %>">
+  <%= link_to gravatar_for(movie.user, size: 50), movie.user %>
+  <span class="user"><%= link_to movie.user.name, movie.user %></span>
+  <span class="moviename">Movie Name: <%= movie.name %></span>
+  <span class="comment"><%= movie.comment %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(movie.created_at) %> ago.
+    <% if current_user?(movie.user) %>
+      <%= link_to "delete", movie, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>
