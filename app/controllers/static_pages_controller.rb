@@ -5,6 +5,12 @@ class StaticPagesController < ApplicationController
       @feed_items = current_user.feed.paginate(page: params[:page])
     end
   end
+  
+  def intro
+    respond_to do |format|
+      format.js
+    end
+  end
 
   def help
   end

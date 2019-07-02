@@ -6,7 +6,7 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(movie.created_at) %> ago.
     <% if current_user?(movie.user) %>
-      <%= link_to "delete", movie, method: :delete,
+      <%= link_to "Delete", movie, class: "btn btn-sm btn-primary", remote: true, method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>

@@ -20,6 +20,25 @@
     <h2>
       This is the forum for movie fans in the FSU.
     </h2>
+    
+    <input id="introbtn" type="button" class="btn btn-lg btn-primary" value="Toggle Introduction" style="margin: 10px auto">
+    <div id="intro" style="margin: 10px auto">
+      <section>
+        Project 1: Ruby on Rails<br/>
+        Introduction: This website is built on Rails. Major funcationalities include: <br/>
+        1. Users account register and activation via e-mail. <br/>
+        2. Models validations. <br/>
+        3. Users account authentication and authorization.<br/>
+        4. Users and movies association. <br/>
+      </section>
+      
+      <section>
+        Project 2: Javascript<br/>
+        Introduction:<br/>  
+        1. Click the button to show/hide the introduction.<br/>
+        2. You can update your movies via AJAX without reload the page. To view this please login and go to your home page.<br/>
+      </section>
+    </div>
 
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
